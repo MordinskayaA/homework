@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Веб-вёрстка</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css"> 
+	<link rel="stylesheet" type="text/css" href="css/fontello-embedded.css"> 		   
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css"> 
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-input-mask-phone-number.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="slick/slick.min.js"></script>   
+    <script src="js/page.js"></script>
+
+</head>
+<body>
+
+	<header class="header">
+		<div class="fixed-container">
+			<div class="header__inner">
+			<nav class="nav">
+				<div class="header__menu">
+					<a class="nav__items"  href="#service">Услуги</a>
+					<a class="nav__items" href="#portfolio">Портфолио</a>
+					<a class="nav__items" href="#price">Стоимость</a>
+				</div>
+			</nav>
+			<button class="nav__menu-button"><span class="nav__menu-button_line"></span></button>
+				<div class="toggle-menu">
+             		<nav class="toggle__nav">
+                		<ul class="toggle-menu__ul">
+                   			<li class="toggle-menu__li"><a class="nav__items" href="#service">Услуги</a></li>
+                    		<li class="toggle-menu__li"><a class="nav__items" href="#portfolio">Портфолио</a></li>
+                    		<li class="toggle-menu__li"><a class="nav__items" href="#price">Стоимость</a></li>
+                		</ul>
+          			</nav>
+				</div>
+			<div class="header__contacts">
+				<span class="header__number">+7 (499) 995-55-77</span>
+				<button class="contacts__button" data-toggle="modal" data-target="#callback-form">Заказать звонок</button>
+				<button class="contacts__button_small" data-toggle="modal" data-target="#callback-form"><img src="img/phone.svg" alt="phone" ></button>
+			</div>
+			</div>
+		</div>
+	</header>
+
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="feedback-form" aria-hidden="true" data-backdrop="static">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <form class="modal-content" method="get" action="">
+		      <div class="modal-header">
+		        <h5 class="modal-title">Обратная связь</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      		<label>Ваше имя</label>
+		        		<input name="name" class="form-control">
+		        	<label>Эл. почта </label>
+		        		<input type="email" name="email" required="required" class="form-control" placeholder="name@example.com">
+		        	<label>Моб. телефон</label>
+		        		<input type="text" name="telephone" placeholder="(***) ***-****" class="form-control phone">
+		        		<label>Предпочитаемый вид связи</label>
+		        		<div class="form-check form-check-inline">
+		        			<div class="col">
+		        				<input type="checkbox" name="communication-method" value="По телефону" class="form-check-input" id="tel_chk"> 
+		        				<label for="tel_chk" class="form-check-label">По телефону </label>
+		        			</div>
+		        			<div class="col">
+		        				<input type="checkbox" name="communication-method" value="По почте" class="form-check-input" id="mail_chk">
+		        				<label for="mail_chk" class="form-check-label"> По почте </label>
+		        			</div>
+		        		</div>
+		        	<label>Комментарий</label>
+		        		<textarea class="form-control" name="comment" rows="3"></textarea>
+		      </div>
+		      <div class="modal-footer">
+		        <button class="button button_small" data-dismiss="modal" type="submit">Отправить</button>
+		    </div>
+		   </form>
+		  </div>
+		</div>
+
+
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="callback-form" aria-hidden="true" data-backdrop="static">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <form class="modal-content" method="get" action="">
+		      <div class="modal-header">
+		        <h5 class="modal-title">Обратный звонок</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      		<label>Ваше имя</label>
+		        		<input name="name" class="form-control">
+		        	<label>Моб. телефон</label>
+		        		<input type="text" name="telephone" placeholder="(***) ***-****" class="form-control phone">
+		      </div>
+		      <div class="modal-footer">
+		        <button class="button button_small" data-dismiss="modal" type="submit">Отправить</button>
+		    </div>
+		   </form>
+		  </div>
+		</div>
+			
+
+
+
+	<div class="introduction">
+			<div class="introduction__fixed-container">
+				<div class="introduction__text-background">
+					<div class="introduction__text-background_div">&lt;div&gt;</div>
+					<div class="introduction__text-background_slash introduction__text-background_slash_size_s">&lt;/&gt;</div>
+					<div class="introduction__text-background_sharp">#</div>
+					<div class="introduction__text-background_braces">{ }</div>
+					<div class="introduction__text-background_div introduction__text-background_div_size_s">&lt;div&gt;</div>
+				</div>
+				<div class="introduction__background">
+					<svg class="introduction__background_figure" width="600" height="450" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+    					<defs>
+    						<linearGradient id="linearGradient">
+      							<stop style="stop-color:#61b4c3;stop-opacity:1;" offset="0"/>
+      							<stop style="stop-color:#9a5ba7;stop-opacity:1;" offset="1"/>
+    						</linearGradient>
+ 						</defs>
+					<path d="M 139 46 C 172 10 263 -39 364 60 C 432 127 462 188 473 230 C 476 245 477 275 457 275 H 18 C-42 246  73 110 139 46 Z" fill="url(#linearGradient)"/>
+					</svg>
+					<div class="introduction__background_photo_girl"></div>
+				</div>
+				<div class="introduction__inner">
+						<h1 class="head1">Анна Мординская</h1>
+						<span class="introduction__info">Frontend-разработчик и&nbsp;веб-верстальщик</span>
+					<button class="button" data-toggle="modal" data-target="#feedback-form">Узнать больше</button>
+				</div>
+			</div>
+	</div>
+
+
+	<main id="service" class="main">
+		<div class="fixed-container">
+			<div class="main__inner">
+			<div class="main___head">
+				<h2 class="head2">Что я делаю</h2>
+			</div>
+			<div class="main__skill">
+				<div class="main__skill-item"> <img class="main__img" src="img/monitor.svg" alt="monitor"><div class="main__info">Вёрстка лендинг-страниц и&nbsp;сайтов&nbsp;любой&nbsp;сложности</div></div>
+				<div class="main__skill-item"> <img class="main__img" src="img/responsive.svg" alt="responsive"><div class="main__info">Адаптивная вёрстка под все&nbsp;браузеры&nbsp;и&nbsp;устройства</div></div>
+				<div class="main__skill-item"> <img class="main__img" src="img/js.svg" alt="js"><div class="main__info">Front-end разработка и&nbsp;программирование</div></div>
+				<div class="main__skill-item"> <img class="main__img" src="img/page-settings.svg" alt="page-settings"><div class="main__info">Исправление&nbsp;и&nbsp;доработка существующей&nbsp;вёрстки</div></div>
+			</div>
+			<div class="main__button">
+				<button class="button" data-toggle="modal" data-target="#feedback-form">Узнать стоимость</button>
+			</div>
+		</div>
+		</div>
+	</main>
+	
+	<div id="portfolio" class="portfolio">
+		<div class="fixed-container">
+			<div class="portfolio__inner">
+				<h2 class="head2">Примеры моих работ</h2>
+
+				<div class="portfolio__slider">
+				   <div class="portfolio__slider-list">
+					<div class="portfolio__slider-item">
+						<div class="portfolio__slider-item__photo portfolio__slider-item_news"></div>
+						<div class="portfolio__slider-item__text">Новостной портал</div>
+					</div>
+				   </div>
+
+				   <div class="portfolio__slider-list">
+					<div class="portfolio__slider-item">
+						<div class="portfolio__slider-item__photo portfolio__slider-item_children-clothes"></div>
+						<div  class="portfolio__slider-item__text">Детская одежда</div>
+					</div>
+				   </div>
+
+				   <div class="portfolio__slider-list">
+					<div class="portfolio__slider-item">
+						<div class="portfolio__slider-item__photo portfolio__slider-item_fishing"></div>
+						<div class="portfolio__slider-item__text">Рыболовство</div>
+					</div>
+				   </div>
+
+				   <div class="portfolio__slider-list">
+					<div class="portfolio__slider-item">
+						<div class="portfolio__slider-item__photo portfolio__slider-item_flower-shop"></div>
+						<div class="portfolio__slider-item__text">Цветочный магазин</div>
+					</div>
+				   </div>
+
+				   <div class="portfolio__slider-list">
+					<div class="portfolio__slider-item">
+						<div class="portfolio__slider-item__photo portfolio__slider-item_hair-salon"></div>
+						<div class="portfolio__slider-item__text">Салон красоты</div>
+					</div>
+				   </div>
+
+				</div>
+					<button class="button" data-toggle="modal" data-target="#feedback-form">Заказать проект</button>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="price" class="price">
+		<div class="fixed-container">
+			<div class="price__text-background">
+				<div class="price__text-background_div">&lt;div&gt;</div>
+				<div class="price__text-background_slash">&lt;/&gt;</div>
+				<div class="price__text-background_sharp">#</div>
+				<div class="price__text-background_braces">{&nbsp;}</div>
+				<div class="price__text-background_braces price__text-background_braces_size_s">{&nbsp;}</div>
+			</div>
+			<div class="price__inner">
+				<h3 class="price__head">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
+				<div class="price__info">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<footer class="footer">
+ <div class="fixed-container">
+  <div class="footer__inner">
+	<nav class="nav">
+		<div class="footer__menu">
+			<a class="nav__items nav__items_grey" href="#service">Услуги</a>
+			<a class="nav__items nav__items_grey" href="#portfolio">Портфолио</a>
+			<a class="nav__items nav__items_grey" href="#price">Стоимость</a>
+		</div>
+	</nav>
+ 	<div class="footer__contacts">
+ 		<span class="contacts__number icon-phone">+7(921)666-66-66</span>
+ 		<address class="contacts__mail icon-mail-alt">anna.mordinskaya@gmail.com</address> 
+ 	</div>
+ 	<div class="footer__s-networks">
+ 		<button class="contacts__button" data-toggle="modal" data-target="#callback-form">Заказать звонок</button>
+ 		<div class="icons">
+ 			<a class="icons__items vk" href="https://vk.com" target="_blank"></a>
+ 			<a class="icons__items facebook" href="https://www.facebook.com" target="_blank"></a>
+ 			<a class="icons__items twitter" href="https://twitter.com" target="_blank"></a>
+ 			<a class="icons__items instagram" href="https://www.instagram.com" target="_blank"></a>
+ 		</div>
+	 </div>
+  </div>
+ </div>
+</footer>
+
+	<div class="copyright">
+		<div class="fixed-container">
+			<div class="copyright__inner">
+				<div class="copyright__info">&copy;Анна Мординская, 2018</div>
+			</div>
+		</div>
+	</div>
+
+</body>

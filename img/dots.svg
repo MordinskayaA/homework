@@ -1,0 +1,9 @@
+<svg viewBox="0 0 120 120" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  	<linearGradient
+       id="linearGradient">
+      <stop style="stop-color:#61b4c3;stop-opacity:1;" offset="0"/>
+      <stop style="stop-color:#9a5ba7;stop-opacity:0.9" offset="1"/>
+    </linearGradient>
+  <circle cx="60" cy="60" r="50" fill="url(#linearGradient)"/>
+</svg>
